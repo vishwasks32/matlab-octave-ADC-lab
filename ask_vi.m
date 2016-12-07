@@ -15,16 +15,6 @@ f = 5;
 tc = 1:0.001:9;
 fc = sin(2 * pi * f * tc);
 
-p = 1
-while p < nx+1
-	if x[p] == 1
-		ask = sin(2*pi*f*t)
-	else
-		ask = 0
-	endif
-	p = p + 1;
-endwhile
-
 % Perform ASK
 i = 1;
 while i < nx+1
