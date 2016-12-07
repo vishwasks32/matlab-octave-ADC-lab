@@ -18,7 +18,7 @@ Y=input ('wavelength = ');
 f=C/Y;
 ratio=L/Y;
 P = (L /(2 * r));
-X = -120 * Y / (pi/L) * (log(P) -1);
+X = -120 * Y / (pi*L) * (log(P) -1);
 rloss=L/(6*pi*r)*sqrt((pi*f*U)/(2*r));
 rrad=20*pi^2*(L/Y)^2;
 Z = rrad + rloss + j* X;
