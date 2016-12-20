@@ -1,5 +1,5 @@
 % Author : Vishwas K Singh
-% Script to find radiation pattern of circular antenna array
+% Script to find radiation pattern of linear antenna array
 
 % Clear everything
 clc;
