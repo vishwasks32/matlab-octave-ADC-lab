@@ -25,6 +25,7 @@ tc = 1:0.001:nx+1;
 fc1 = sin(2*pi*f*tc);
 subplot(4,1,2);
 plot(tc,fc1);
+axis([1 9 -1 1]);
 title('Carrier Frequency 1');
 xlabel('Time');
 ylabel('amplitude');
@@ -35,6 +36,7 @@ grid on;
 fc2 = cos(2*pi*f*tc);
 subplot(4,1,3);
 plot(tc,fc2);
+axis([1 9 -1 1]);
 title('Carrier Frequency 2');
 xlabel('Time');
 ylabel('amplitude');
@@ -54,6 +56,7 @@ while i < nx+1
    % Plot the final output
    subplot(4,1,4);
    plot(t,psk);
+   axis([1 9 -1 1]);
    title('PSK');
    xlabel('Time');
    ylabel('amplitude');

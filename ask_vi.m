@@ -12,20 +12,8 @@ nx = size(x,2);
 
 % Generate the carrier frequency with say 5kHz
 f = 5;
-tc = 1:0.001:9;
+tc = 1:0.001:10;
 fc = sin(2 * pi * f * tc);
-
-% Perform ASK
-i = 1;
-while i < nx+1
-	t = i:0.001:i+1;
-	if x[i] == 1
-		ask = sin(2*pi*f*t)
-	else
-		ask = 0
-	endif
-	i = i + 1;
-endwhile
 
 % Plot the sequence				
 subplot(3,1,1);
@@ -47,12 +35,24 @@ ylabel('Amplitude');
 grid on;
 hold on;
 
-% Plot the ASK Signal
-subplot(3,1,3);
-plot(t,ask);
-axis([1 9 -1 1]);
-title('ASK');
-xlabel('Time');
-ylabel('Amplitude');
-grid on;
-hold on;
+% Perform ASK
+i = 1;
+while i < nx+1
+	t = i:0.001:i+1;
+	if x(i) == 1
+		ask = sin(2*pi*f*t);
+	else
+		ask = 0;
+	endif
+  % Plot the ASK Signal
+  subplot(3,1,3);
+  plot(t,ask);
+  axis([1 9 -1 1]);
+  title('ASK');
+  xlabel('Time');
+  ylabel('Amplitude');
+  grid on;
+  hold on;
+  
+	i = i + 1;
+endwhile

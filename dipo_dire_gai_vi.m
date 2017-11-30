@@ -17,8 +17,8 @@ r=input ('Radius of dipole : ');
 Y=input ('wavelength : ');
 
 f=C/Y;
-ratio=L/Y;
-rloss=L/(6*pi*r)*sqrt((pi*f*U)/(2*r));
+ratio=L/Y
+rloss=L/(6*pi*r))*sqrt((pi*f*U)/(2*r));
 rrad=20*pi^2*(L/Y)^2;
 
 if ratio<=0.1
@@ -43,4 +43,5 @@ Bw=4*pi/D;
 fprintf('output parameters: \n');
 fprintf('directivity = %6.4f \n',D);
 fprintf('directivity(dB) = %6.4f \n',Db);
+fprintf('Gain = %6.4f \n',G');
 fprintf('Beam width angle = %6.4f\n',Bw);
